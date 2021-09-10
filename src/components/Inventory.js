@@ -1,27 +1,23 @@
 import React from "react";
 import Juice from "./Juice";
+import PropTypes from "prop-types";
 
-const masterInventory = [
-  {
-    name: 'Tropical',
-    brand: 'Coco Nut',
-    price: 2.99,
-    flavor: 'Pineapple'
-  }
-];
-
-function Inventory() {
+function Inventory(props) {
   return (
     <React.Fragment>
-    {masterInventory.map((juice, index) =>
+    {props.inventory.map((juice, index) =>
           <Juice name={juice.name}
-            location={juice.brand}
+            brand={juice.brand}
             price={juice.price}
             flavor={juice.flavor}
             key={index}/>
         )}
     </React.Fragment>
   )
+}
+
+Inventory.propTypes = {
+  inventory: PropTypes.array
 }
 
 export default Inventory;

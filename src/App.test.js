@@ -21,7 +21,7 @@ expect(result.props.children).toEqual([<Header />, <JuiceControl />]);
 
 test('renders homepage', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Juice/i);
+  const linkElement = screen.getByText(/Hummingbird/i);
   expect(linkElement).toBeInTheDocument();
 });
 
