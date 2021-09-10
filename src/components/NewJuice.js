@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 } from 'uuid';
 import PropTypes from "prop-types";
-
+import JuiceForm from "./JuiceForm";
 function NewJuice(props) {
 
   function handleNewJuiceSubmission(event) {
@@ -11,25 +11,9 @@ function NewJuice(props) {
 
   return (
     <React.Fragment>
-      <form onSubmit={handleNewJuiceSubmission}>
-        <input
-          type='text'
-          name='name'
-          placeholder='Name' />
-        <input
-          type='text'
-          name='brand'
-          placeholder='Brand' />
-        <input
-        type='string'
-        name='price'
-        placeholder='Price' />
-        <input
-          type='text'
-          name='flavor'
-          placeholder='Flavor' />
-        <button type='submit'>Add</button>
-      </form>
+      <JuiceForm 
+      formSubmissionHandler={handleNewJuiceSubmission}
+      buttonText="Add" />
     </React.Fragment>
   )
 }

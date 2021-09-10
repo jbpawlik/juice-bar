@@ -6,7 +6,9 @@ function Inventory(props) {
   return (
     <React.Fragment>
     {props.inventory.map((juice) =>
-          <Juice name={juice.name}
+          <Juice
+          whenJuiceClicked = {props.onJuiceSelection}
+          name={juice.name}
             brand={juice.brand}
             price={juice.price}
             flavor={juice.flavor}
