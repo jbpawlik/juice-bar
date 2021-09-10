@@ -47,6 +47,11 @@ class JuiceControl extends React.Component {
       selectedJuice: null
     });
   }
+  
+  handleEditClick = () => {
+    this.setState({editing: true});
+  }
+
 
   handleEditingJuiceInInventory = (juiceToEdit) => {
     const editedMasterInventory = this.state.masterInventory

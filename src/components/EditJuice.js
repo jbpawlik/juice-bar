@@ -2,12 +2,11 @@ import React from "react";
 import JuiceForm from "./JuiceForm";
 import PropTypes from "prop-types";
 
-
 function EditJuice (props) {
-  const {juice } = props;
+  const {juice} = props;
   function handleEditJuiceSubmission(event) {
     event.preventDefault();
-    props.onEditJuice({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, flavor: event.target.flavor.value, id: juice.id});
+    props.onEditJuice({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, flavor: event.target.flavor.value, quantity: event.target.quantity.value, id: juice.id});
   }
   return (
     <React.Fragment>

@@ -5,8 +5,8 @@ import JuiceControl from './JuiceControl'
 function App() {
   return (
     <React.Fragment>
-      <Header/>
-      <JuiceControl />
+        <Header/>
+        <JuiceControl />
     </React.Fragment>
   );
 }
