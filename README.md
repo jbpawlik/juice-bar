@@ -11,6 +11,9 @@ Hummingbird Juice Bar is a proof-of-concept website for a juice bar. The site al
 ### Technologies Used
 Hummingbird Juice Bar uses the React JavaScript library, as well as plain JavaScript, JSX, and HTML/CSS. Styling is done with Bootstrap React.
 ---
+### Project Structure
+<img src='https://github.com/jbpawlik/juice-bar/blob/main/public/juice-bar.drawio.png?raw=true)'>
+---
 ### Installation Instructions
 1. Clone the repository by opening a terminal in the desired location and running 'git clone http://github.com/jbpawlik/juice-bar'
 2. Navigate to the top level of the repository
