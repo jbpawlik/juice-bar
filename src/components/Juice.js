@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 function Juice(props) {
   let quantityWarning = 0
   console.log(props.quantity)
-  if (props.quantity === 0) {
+  if (props.quantity < 1) {
     quantityWarning = 'Out of Stock'
   } else if (props.quantity <= 10 && props.quantity >= 1) {
     quantityWarning = 'Low Stock'

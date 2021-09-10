@@ -11,7 +11,7 @@ function NewJuice(props) {
 
   return (
     <React.Fragment>
-      <JuiceForm 
+      <JuiceForm
       formSubmissionHandler={handleNewJuiceSubmission}
       buttonText="Add" />
     </React.Fragment>
