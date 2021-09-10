@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import NumericInput from "react-numeric-input";
+import NumericInput from "react-numeric-input";
 
 function JuiceForm(props) {
   return (
@@ -35,10 +35,10 @@ function JuiceForm(props) {
         type='number'
         name='quantity'
         placeholder='Quantity'/> */}
-        {/* <NumericInput mobile className='quantity form-control' name='quantity' min={ 0 } 
-	max={ 999 }  type='Number'/> */}
+        <NumericInput mobile className='quantity form-control' name='quantity' min={ 0 } 
+	max={ 999 }  type='Number'/>
         <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" min="0" max="5"></input>
+        <input type="number" id="quantity" name="quantity" min="0" max=""></input>
         {/* <div className="input-group plus-minus-input">
           <div className="input-group-button">
             <button type="button" className="button hollow circle" data-quantity="minus" data-field="quantity">

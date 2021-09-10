@@ -45,10 +45,10 @@ function Inventory(props) {
             quantity={juice.quantity}
             id={juice.id}
             key={juice.id}/>
+            
         )}
         </div>
         </div>
-        <br></br>
         </div>
     </React.Fragment>
   )
