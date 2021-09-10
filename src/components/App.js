@@ -5,8 +5,12 @@ import JuiceControl from './JuiceControl'
 function App() {
   return (
     <React.Fragment>
+      <div className="container">
         <Header/>
-        <JuiceControl />
+        <div className="row">
+            <JuiceControl />           
+        </div>
+      </div>
     </React.Fragment>
   );
 }
