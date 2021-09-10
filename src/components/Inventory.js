@@ -32,6 +32,9 @@ import PropTypes from "prop-types";
 function Inventory(props) {
   return (
     <React.Fragment>
+      <div className="container">
+        <div className="row">
+          <div className="col">
     {props.inventory.map((juice) =>
           <Juice
           whenJuiceClicked = {props.onJuiceSelection}
@@ -43,6 +46,10 @@ function Inventory(props) {
             id={juice.id}
             key={juice.id}/>
         )}
+        </div>
+        </div>
+        <br></br>
+        </div>
     </React.Fragment>
   )
 }
