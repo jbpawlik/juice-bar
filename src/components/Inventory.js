@@ -8,7 +8,7 @@ function Inventory(props) {
     <React.Fragment>
       <Container>
         <Row>
-          
+           
     {props.inventory.map((juice) =>
       <Col lg='2'>
         <Juice
