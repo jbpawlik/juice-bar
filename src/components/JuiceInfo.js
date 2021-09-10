@@ -15,8 +15,12 @@ function JuiceInfo(props){
   return (
     <React.Fragment>
       <h1>Juice Info</h1>
-      <h2>${juice.price}: {juice.name} - {juice.brand} - {juice.flavor}</h2>
-      <h2>{juice.quantity}</h2>
+      <h2>${juice.price}
+      <br></br> 
+      {juice.name}
+      <br></br>{juice.brand}
+      <br></br>{juice.flavor}</h2>
+      <h2>#{juice.quantity}liters</h2>
       {quantityWarning}
       <button onClick={props.onClickingEdit}>Update Juice</button>
       <button onClick={()=> onClickingDelete(juice.id)}>Delete Juice</ button>
