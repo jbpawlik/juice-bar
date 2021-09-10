@@ -6,6 +6,7 @@ function NewJuice(props) {
 
   function handleNewJuiceSubmission(event) {
     event.preventDefault();
+    props.onNewJuiceCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, flavor: event.target.flavor.value, id: v4()});
   }
 
   return (
@@ -20,7 +21,7 @@ function NewJuice(props) {
           name='brand'
           placeholder='Brand' />
         <input
-        type='number'
+        type='string'
         name='price'
         placeholder='Price' />
         <input
@@ -32,5 +33,9 @@ function NewJuice(props) {
     </React.Fragment>
   )
 }
+
+NewJuice.propTypes = {
+  onNewJuiceCreation: PropTypes.func
+};
 
 export default NewJuice;
