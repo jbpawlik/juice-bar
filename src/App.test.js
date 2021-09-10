@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import App from './components/App';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import Header from './components/Header';
+import JuiceControl from './components/JuiceControl';
 import Enzyme from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { shallow } from "enzyme";
@@ -16,9 +17,7 @@ const renderer = new ShallowRenderer();
 renderer.render(<App />);
 const result = renderer.getRenderOutput();
 
-expect(result.props.children).toEqual(
-  <Header />
-);
+expect(result.props.children).toEqual([<Header />, <JuiceControl />]);
 
 test('renders homepage', () => {
   render(<App />);
