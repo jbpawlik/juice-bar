@@ -14,13 +14,13 @@ function App() {
           <Col sm="10">
             <Header />
           </Col>
-        <Row>
-        <Col sm="2">
-            <Sidebar/>
-          </Col>
-          <Col sm="10">
-            <JuiceControl/>
-          </Col>
+          <Row>
+          <Col sm="2">
+              <Sidebar/>
+            </Col>
+            <Col sm="10">
+              <JuiceControl/>
+            </Col>
         </Row>  
         </Row>
       </Container>

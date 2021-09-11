@@ -15,7 +15,7 @@ function JuiceInfo(props){
   return (
     <React.Fragment>
       <Container>
-      <Row>
+      {/* <Row> */}
         <div className="" style={{ border: 'solid 2px black', backgroundColor: 'white', textAlign: 'center'}}>
           <strong>{juice.name}</strong>
           <br/>Brand: {juice.brand}
@@ -26,7 +26,7 @@ function JuiceInfo(props){
           <br/>
           <button onClick={props.onClickingEdit}>Update</button>  <button onClick={()=> onClickingDelete(juice.id)}>Delete</ button>
         </div>
-      </Row>
+      {/* </Row> */}
       </Container>
     </React.Fragment>
   );

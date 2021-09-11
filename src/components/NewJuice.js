@@ -11,9 +11,11 @@ function NewJuice(props) {
 
   return (
     <React.Fragment>
+      <div style={{maxHeight: '100em'}}>
       <JuiceForm
       formSubmissionHandler={handleNewJuiceSubmission}
-      buttonText="Add" />
+      buttonText="Add New Juice" />
+      </div>
     </React.Fragment>
   )
 }

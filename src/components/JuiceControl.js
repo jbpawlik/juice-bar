@@ -98,11 +98,10 @@ class JuiceControl extends React.Component {
     }
     return (
       <React.Fragment>
-        <div style={{minHeight: "5em", width: "100%", border: 'solid 2px black', backgroundImage: `url(${'bottleshelf.jpg'})`
-      }}>
+        <div style={{minHeight: "5em", maxHeight: '100em', width: "100%", border: 'solid 2px black', backgroundImage: `url(${'bottleshelf.jpg'})`}}>
           <p style={{minHeight: '100%', backgroundColor: "white", textAlign: 'center', padding: '1em', border: 'solid 2px black', margin: '-2px'}}>Inventory</p>
           {currentlyVisibleState}
-          <button style={{padding: '1em', width: '100.4%', border: 'solid 2px black', marginTop: '50%', marginLeft: '-2px', marginBottom: '-2px', marginRight: '-2px'}} onClick={this.handleClick}>{buttonText}</button>
+          <button style={{padding: '1em', width: '100.4%', border: 'solid 2px black', marginLeft: '-2px', marginBottom: '-2px', marginRight: '-2px'}} onClick={this.handleClick}>{buttonText}</button>
         </div>
       </React.Fragment>
     )
