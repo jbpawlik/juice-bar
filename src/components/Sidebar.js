@@ -5,7 +5,6 @@ function Sidebar() {
   return (
     <React.Fragment>
       <p style={{}}>Hummingbird Juice Bar and Retailer serves the greater Flamingo area.</p>
-       
     </React.Fragment>
   )
 }

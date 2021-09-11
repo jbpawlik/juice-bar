@@ -8,13 +8,15 @@ function EditJuice (props) {
   const {juice } = props;
   function handleEditJuiceSubmission(event) {
     event.preventDefault();
-    props.onEditJuice({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, flavor: event.target.flavor.value, id: juice.id});
+    props.onEditJuice({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, flavor: event.target.flavor.value, quantity: event.target.quantity.value, id: juice.id});
   }
   return (
     <React.Fragment>
+      <div className="row">
       <JuiceForm 
         formSubmissionHandler={handleEditJuiceSubmission}
         buttonText="Update Juice" />
+      </div>
     </React.Fragment>
   );
 }

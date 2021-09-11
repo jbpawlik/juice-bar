@@ -12,7 +12,7 @@ function App() {
           <Col sm="2">
           </Col>
           <Col sm="10">
-            <Header/>
+            <Header />
           </Col>
         <Row>
         <Col sm="2">

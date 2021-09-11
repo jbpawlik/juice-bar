@@ -67,31 +67,42 @@ class JuiceControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.editing ) {      
-      currentlyVisibleState = <EditJuice juice = {this.state.selectedJuice} onEditJuice = {this.handleEditingJuiceInInventory}/>
+    if (this.state.editing ) {
+      currentlyVisibleState = 
+      <EditJuice 
+      juice = {this.state.selectedJuice} 
+      onEditJuice = {this.handleEditingJuiceInInventory}
+      />
       buttonText = "Return to Inventory";
     } else if (this.state.selectedJuice != null) {
       currentlyVisibleState =
       <JuiceInfo 
       juice = {this.state.selectedJuice}
       onClickingDelete = {this.handleDeletingJuice}
-      onClickingEdit = {this.handleEditClick}/>
+      onClickingEdit = {this.handleEditClick}
+      />
       buttonText = "Return to Inventory"
     } else if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewJuice onNewJuiceCreation={this.handleAddingNewJuiceToInventory} />;
+      currentlyVisibleState = 
+      <NewJuice 
+      onNewJuiceCreation={this.handleAddingNewJuiceToInventory}
+       />;
       buttonText = "Return to Inventory"
       } else {
-      currentlyVisibleState = <Inventory inventory={this.state.masterInventory} onJuiceSelection={this.handleChangingSelectedJuice} />
-      ;
+      currentlyVisibleState = 
+      <Inventory 
+      inventory={this.state.masterInventory} 
+      onJuiceSelection={this.handleChangingSelectedJuice} 
+      />;
       buttonText = "New Juice"
     }
     return (
       <React.Fragment>
-        <div style={{minHeight: "5em", width: "100%", border: 'double 5px black', borderStyle: 'double', backgroundImage: `url(${'bottleshelf.jpg'})`
+        <div style={{minHeight: "5em", width: "100%", border: 'solid 2px black', backgroundImage: `url(${'bottleshelf.jpg'})`
       }}>
-          <p style={{minHeight: '100%', backgroundColor: "white", textAlign: 'center', padding: '1em'}}>Inventory</p>
+          <p style={{minHeight: '100%', backgroundColor: "white", textAlign: 'center', padding: '1em', border: 'solid 2px black', margin: '-2px'}}>Inventory</p>
           {currentlyVisibleState}
-          <button style={{padding: '1em', minWidth: '100%', borderTop: 'double 5px black', marginTop: '50%'}} onClick={this.handleClick}>{buttonText}</button>
+          <button style={{padding: '1em', width: '100.4%', border: 'solid 2px black', marginTop: '50%', marginLeft: '-2px', marginBottom: '-2px', marginRight: '-2px'}} onClick={this.handleClick}>{buttonText}</button>
         </div>
       </React.Fragment>
     )

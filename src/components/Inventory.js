@@ -1,7 +1,7 @@
 import React from "react";
 import Juice from "./Juice";
 import PropTypes from "prop-types";
-import {Row, Container, Col} from 'react-bootstrap'
+import {Row, Container, Col, Card} from 'react-bootstrap'
 
 function Inventory(props) {
   return (
@@ -9,7 +9,7 @@ function Inventory(props) {
       <Container>
         <Row style={{}}>
           {props.inventory.map((juice) =>
-          <Col sm='4' style={{padding: '1em', minHeight: '100%', backgroundColor: 'antiquewhite', border: "solid 2px black", textAlign: 'center'}}>
+          <Col sm='4' style={{padding: '1em', minHeight: '100%', backgroundColor: 'white', border: "solid 2px black", textAlign: 'center', marginTop: '10px'}}>
               <Juice
                 whenJuiceClicked = {props.onJuiceSelection}
                 name={juice.name}

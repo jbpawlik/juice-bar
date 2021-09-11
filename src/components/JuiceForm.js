@@ -6,45 +6,42 @@ import {Container, Row, Col} from 'react-bootstrap';
 function JuiceForm(props) {
   return (
     <React.Fragment>
-      <Container >
-        <Row>
-          <Col sm={2} style={{display: 'block', flex: 'inline-flex'}}>
+      <Container>
+        <div style={{padding: '5%', maxHeight: '100%', backgroundColor: 'white', marginTop: 
+      '20%', border: "solid 2px black"}}>
         <form onSubmit={props.formSubmissionHandler}>
-          <input
+          <p style={{textAlign: 'center'}}>Edit</p>
+          <input style={{width: '100%', border: "solid 2px black"}}
             type='text'
             name='name'
             placeholder='Name' 
             required />
-            <br></br>
-          <input
+            <br/><br/>
+          <input style={{width: '100%', border: "solid 2px black"}}
             type='text'
             name='brand'
             placeholder='Brand'
             required />
-            <br></br>
-          <input
+            <br/><br/>
+          <input style={{width: '100%', border: "solid 2px black"}}
           type='string'
           name='price'
           placeholder='Price'
           required />
-          <br></br>
-          <input
+          <br/><br/>
+          <input style={{width: '100%', border: "solid 2px black"}}
             type='text'
             name='flavor'
             placeholder='Flavor'
             minimum='0'
             required />
-            <br></br>
-          {/* <input
-          type='number'
-          name='quantity'
-          placeholder='Quantity'/> */}
+          <br/><br/>
           <NumericInput mobile className='quantity form-control' name='quantity' min={ 0 }
-    max={ 999 }  type='Number'/>
+    max={ 999 }  type='Number' placeholder="quantity" />
+          <br/><br/>
           <button type='submit'>Add</button>
         </form>
-        </Col>
-        </Row>
+        </div>
       </Container>
     </React.Fragment>
   );
