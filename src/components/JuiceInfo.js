@@ -1,33 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Row, Container} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 
 function JuiceInfo(props){
+  const {juice, onClickingDelete } = props;
   let quantityWarning = 0
-  if (props.quantity < 1) {
+  if (juice.quantity < 1) {
     quantityWarning = 'Out of Stock'
-  } else if (props.quantity <= 10 && props.quantity >= 1) {
+  } else if (juice.quantity <= 10 && juice.quantity >= 1) {
     quantityWarning = 'Low Stock'
   } else {
     quantityWarning = 'In Stock'
   }
-  const {juice, onClickingDelete } = props;
   return (
     <React.Fragment>
-      <Container>
-      {/* <Row> */}
-        <div className="" style={{ border: 'solid 2px black', backgroundColor: 'white', textAlign: 'center'}}>
+      <Container style={{padding:'5em', minHeight: '20em'}}>
+        <div style={{ border: 'solid 2px black', backgroundColor: 'white', textAlign: 'center', padding: '1em'}}>
           <strong>{juice.name}</strong>
           <br/>Brand: {juice.brand}
           <br/>Flavor: {juice.flavor}
           <br/>Price Per Liter: ${juice.price}
           <br/>Stock: {juice.quantity} Units
-          <br/>{quantityWarning}
+          <br/><em>{quantityWarning}</em>
           <br/>
-          <button onClick={props.onClickingSell}>Sell Liter</button>
-          <button onClick={props.onClickingEdit}>Update</button>  <button onClick={()=> onClickingDelete(juice.id)}>Delete</ button>
+          <button onClick={props.onClickingSell}>Sell Liter</button>  <button onClick={props.onClickingEdit}>Update</button>  <button onClick={()=> onClickingDelete(juice.id)}>Delete</ button>
         </div>
-      {/* </Row> */}
       </Container>
     </React.Fragment>
   );

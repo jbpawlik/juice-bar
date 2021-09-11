@@ -12,9 +12,11 @@ function EditJuice (props) {
   }
   return (
     <React.Fragment>
+      <div style={{padding: '1em'}}>
       <JuiceForm 
         formSubmissionHandler={handleEditJuiceSubmission}
         buttonText="Update Juice" />
+        </div>
     </React.Fragment>
   );
 }

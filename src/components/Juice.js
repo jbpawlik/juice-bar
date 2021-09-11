@@ -5,7 +5,6 @@ import {Container, Card} from "react-bootstrap";
 
 function Juice(props) {
   let quantityWarning = 0
-  console.log(props.quantity)
   if (props.quantity < 1) {
     quantityWarning = 'Out of Stock'
   } else if (props.quantity <= 10 && props.quantity >= 1) {
@@ -23,7 +22,7 @@ function Juice(props) {
           <br/>{props.flavor} flavor
           <br/>${props.price} per liter
           <br/>{props.quantity} liters
-          <br/>{quantityWarning}
+          <br/><em>{quantityWarning}</em>
           </div>
         </Card>
       </Container>
