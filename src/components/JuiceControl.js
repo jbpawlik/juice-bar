@@ -40,6 +40,21 @@ class JuiceControl extends React.Component {
     this.setState({selectedJuice: selectedJuice});
   }
 
+  handleSellLiterOfJuice = (selectedJuice) => {
+    const newState = this.state.masterInventory.map((selectedJuice) => {
+      const soldJuice = selectedJuice
+      if (soldJuice.quantity === 0) {
+        alert('Sold out')
+      } else {
+      soldJuice.quantity -= 1;
+      
+      }return soldJuice
+    });
+    this.setState({
+      newState
+    })
+  }
+
   handleDeletingJuice = (id) => {
     const newMasterInventory = this.state.masterInventory.filter(juice => juice.id !== id);
     this.setState({
@@ -51,6 +66,8 @@ class JuiceControl extends React.Component {
   handleEditClick = () => {
     this.setState({editing: true});
   }
+
+
 
 
   handleEditingJuiceInInventory = (juiceToEdit) => {
@@ -80,6 +97,7 @@ class JuiceControl extends React.Component {
       juice = {this.state.selectedJuice}
       onClickingDelete = {this.handleDeletingJuice}
       onClickingEdit = {this.handleEditClick}
+      onClickingSell = {this.handleSellLiterOfJuice}
       />
       buttonText = "Return to Inventory"
     } else if (this.state.formVisibleOnPage) {
@@ -92,7 +110,7 @@ class JuiceControl extends React.Component {
       currentlyVisibleState = 
       <Inventory 
       inventory={this.state.masterInventory} 
-      onJuiceSelection={this.handleChangingSelectedJuice} 
+      onJuiceSelection={this.handleChangingSelectedJuice}
       />;
       buttonText = "New Juice"
     }
@@ -106,8 +124,6 @@ class JuiceControl extends React.Component {
       </React.Fragment>
     )
   }
-
-
 }
 
 export default JuiceControl;

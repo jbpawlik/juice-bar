@@ -24,6 +24,7 @@ function JuiceInfo(props){
           <br/>Stock: {juice.quantity} Units
           <br/>{quantityWarning}
           <br/>
+          <button onClick={props.onClickingSell}>Sell Liter</button>
           <button onClick={props.onClickingEdit}>Update</button>  <button onClick={()=> onClickingDelete(juice.id)}>Delete</ button>
         </div>
       {/* </Row> */}
@@ -35,7 +36,8 @@ function JuiceInfo(props){
 JuiceInfo.propTypes = {
   juice: PropTypes.object,
   onClickingDelete: PropTypes.func,
-  onClickingEdit: PropTypes.func
+  onClickingEdit: PropTypes.func,
+  onClickingSell: PropTypes.func
 }
 
 export default JuiceInfo;
