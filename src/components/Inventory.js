@@ -9,7 +9,7 @@ function Inventory(props) {
       <Container>
         <Row style={{}}>
           {props.inventory.map((juice) =>
-          <Col sm='4' style={{padding: '0', minHeight: '100%', backgroundColor: 'antiquewhite', border: "solid 2px black" }}>
+          <Col sm='4' style={{padding: '1em', minHeight: '100%', backgroundColor: 'antiquewhite', border: "solid 2px black", textAlign: 'center'}}>
               <Juice
                 whenJuiceClicked = {props.onJuiceSelection}
                 name={juice.name}

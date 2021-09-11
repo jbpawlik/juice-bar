@@ -16,15 +16,15 @@ function JuiceInfo(props){
     <React.Fragment>
       <Container>
       <Row>
-        <div style={{minWidth: '100%'}}>
+        <div className="col-4" style={{ border: 'double 5px black', borderStyle: 'double', backgroundColor: 'antiquewhite', textAlign: 'center'}}>
           <strong>{juice.name}</strong>
           <br></br>Brand: {juice.brand}
           <br></br>Flavor: {juice.flavor}
           <br></br>Price Per Liter: ${juice.price}
           <br></br>Stock: {juice.quantity} Units
           <br></br>{quantityWarning}
-          <button onClick={props.onClickingEdit}>Update Juice</button>
-          <button onClick={()=> onClickingDelete(juice.id)}>Delete Juice</ button>
+          <br></br>
+          <button onClick={props.onClickingEdit}>Update</button>  <button onClick={()=> onClickingDelete(juice.id)}>Delete</ button>
         </div>
       </Row>
       </Container>
