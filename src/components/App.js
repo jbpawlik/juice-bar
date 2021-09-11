@@ -1,17 +1,29 @@
 import React from 'react';
 import Header from './Header';
 import JuiceControl from './JuiceControl';
-import {Row} from "react-bootstrap";
+import {Row, Container, Col} from "react-bootstrap";
+import Sidebar from './Sidebar'
 
 function App() {
   return (
     <React.Fragment>
-      <div className="container">
-        <Header/>
+      <Container>
         <Row>
-            <JuiceControl />
+          <Col sm="2">
+          </Col>
+          <Col sm="10">
+            <Header/>
+          </Col>
+        <Row>
+        <Col sm="2">
+            <Sidebar/>
+          </Col>
+          <Col sm="10">
+            <JuiceControl/>
+          </Col>
+        </Row>  
         </Row>
-      </div>
+      </Container>
     </React.Fragment>
   );
 }

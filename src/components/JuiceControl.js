@@ -87,8 +87,11 @@ class JuiceControl extends React.Component {
     }
     return (
       <React.Fragment>
-        <button onClick={this.handleClick}>{buttonText}</button>
-        {currentlyVisibleState}
+        <div style={{minHeight: "5em", width: "80%", border: 'double 5px black', borderStyle: 'double', backgroundImage: `url(${'bottleshelf.jpg'})`
+      }}>
+          {currentlyVisibleState}
+          <button style={{padding: '1em', minWidth: '100%', borderTop: 'double 5px black', marginTop: '50%'}} onClick={this.handleClick}>{buttonText}</button>
+        </div>
       </React.Fragment>
     )
   }

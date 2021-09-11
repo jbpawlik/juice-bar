@@ -5,8 +5,8 @@ function Header() {
   return (
     <React.Fragment>
       <Container>
-        <div className='jumbotron' id='headerText' style={{margin: '50px', display: 'flexbox', flex: 'inline-flex', minWidth: '100%' }}>
-        <h1 ><img src="hummingbird2.jfif" width='80' alt='Hummingbird'></img>Hummingbird Juice<img src="hummingbird1.jfif" width='100' alt='Hummingbird'></img>
+        <div className="row" style={{margin: '50px', marginLeft: '10%', minWidth: '100%' }}>
+        <h1><img src="hummingbird.png" alt='Hummingbird' height="100px"></img><img src="hummingbird1.jfif" width='100' alt='Hummingbird'></img>
         </h1>
         </div>
       </Container>

@@ -1,27 +1,28 @@
 import React from "react";
 import Juice from "./Juice";
 import PropTypes from "prop-types";
-import {Row, Col, Container} from 'react-bootstrap'
+import {Row, Container, Col} from 'react-bootstrap'
 
 function Inventory(props) {
   return (
     <React.Fragment>
       <Container>
-        <Row>
-           
-    {props.inventory.map((juice) =>
-      <Col lg='2'>
-        <Juice
-        whenJuiceClicked = {props.onJuiceSelection}
-        name={juice.name}
-          brand={juice.brand}
-          price={juice.price}
-          flavor={juice.flavor}
-          quantity={juice.quantity}
-          id={juice.id}
-          key={juice.id}/>
-          </Col>
-        )}
+        <Row style={{}}>
+          {props.inventory.map((juice) =>
+          <Col sm='4' style={{padding: '0', minHeight: '100%', backgroundColor: 'antiquewhite', border: "solid 2px black" }}>
+              <Juice
+                whenJuiceClicked = {props.onJuiceSelection}
+                name={juice.name}
+                brand={juice.brand}
+                price={juice.price}
+                flavor={juice.flavor}
+                quantity={juice.quantity}
+                id={juice.id}
+                key={juice.id}
+              />
+              </Col>
+          )}
+          <br></br>
         </Row>
       </Container>
     </React.Fragment>

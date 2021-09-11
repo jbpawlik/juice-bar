@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import {Container, Row, Col} from "react-bootstrap";
 
 
 function Juice(props) {
@@ -16,14 +16,20 @@ function Juice(props) {
   
   return (
     <React.Fragment>
-      <div onClick = {() => props.whenJuiceClicked(props.id)}>
-      <h4>Name: {props.name}</h4>
-      <h5><p>Brand: {props.brand}</p>
-      <p>Flavor{props.flavor}</p>
-      <p>$ {props.price}</p>
-      <p># {props.quantity}</p></h5>
-      {quantityWarning}
-      </div>
+      <Container>
+      {/* <Row> */}
+        <div style={{}}>
+          <div onClick = {() => props.whenJuiceClicked(props.id)}>
+          <strong>{props.name}</strong>
+          <br></br>Brand:  {props.brand}
+          <br></br>Flavor:  {props.flavor}
+          <br></br>Price Per Liter:  ${props.price}
+          <br></br>Stock:  {props.quantity} Units
+          <br></br>{quantityWarning}
+          </div>
+        </div>
+        {/* </Row> */}
+      </Container>
     </React.Fragment>
   )
 }
