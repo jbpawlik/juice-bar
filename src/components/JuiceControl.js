@@ -69,7 +69,6 @@ class JuiceControl extends React.Component {
 
 
 
-
   handleEditingJuiceInInventory = (juiceToEdit) => {
     const editedMasterInventory = this.state.masterInventory
       .filter(juice => juice.id !== this.state.selectedJuice.id)
@@ -116,10 +115,10 @@ class JuiceControl extends React.Component {
     }
     return (
       <React.Fragment>
-        <div style={{minHeight: "5em", maxHeight: '100em', width: "100%", border: 'solid 2px black', backgroundImage: `url(${'bottleshelf.jpg'})`}}>
-          <p style={{minHeight: '100%', backgroundColor: "white", textAlign: 'center', padding: '1em', border: 'solid 2px black', margin: '-2px'}}>Inventory</p>
+        <div style={{minHeight: "5em", maxHeight: '100em', width: "100%", border: 'solid 2px black', borderRadius: '5px', backgroundImage: `url(${'bottleshelf.jpg'})`}}>
+          <p style={{minHeight: '100%', backgroundColor: "white", textAlign: 'center', padding: '1em', border: 'solid 2px black', borderRadius: '5px', margin: '-2px'}}>Inventory</p>
           {currentlyVisibleState}
-          <button style={{padding: '1em', width: '100.4%', border: 'solid 2px black', marginLeft: '-2px', marginBottom: '-2px', marginRight: '-2px'}} onClick={this.handleClick}>{buttonText}</button>
+          <button style={{padding: '1em', width: '100.4%', border: 'solid 2px black', marginLeft: '-2px', borderRadius: '5px', marginBottom: '-2px', marginRight: '-2px'}} onClick={this.handleClick}>{buttonText}</button>
         </div>
       </React.Fragment>
     )

@@ -9,7 +9,7 @@ function Inventory(props) {
       <Container>
         <Row style={{height: '20%', padding: '1em' }}>
           {props.inventory.map((juice) =>
-          <Col sm='3' style={{padding: '1em', minHeight: '100%', backgroundColor: 'white', border: "solid 2px black", textAlign: 'center', margin: '4%',  justifyContent: 'space-evenly'}}>
+          <Col sm='3' style={{padding: '1em', minHeight: '100%', backgroundColor: 'white', border: "solid 2px black", borderRadius: '5px', textAlign: 'center', margin: '4%',  justifyContent: 'space-evenly'}}>
               <Juice
                 whenJuiceClicked = {props.onJuiceSelection}
                 name={juice.name}
@@ -22,7 +22,7 @@ function Inventory(props) {
               />
               </Col>
           )}
-          <br></br>
+          <br/>
         </Row>
       </Container>
     </React.Fragment>

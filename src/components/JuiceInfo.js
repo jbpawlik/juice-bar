@@ -14,8 +14,8 @@ function JuiceInfo(props){
   }
   return (
     <React.Fragment>
-      <Container style={{padding:'5em', minHeight: '20em'}}>
-        <div style={{ border: 'solid 2px black', backgroundColor: 'white', textAlign: 'center', padding: '1em'}}>
+      <Container style={{padding:'5em', minHeight: '30em', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div style={{ border: 'solid 2px black', borderRadius: '5px', backgroundColor: 'white', textAlign: 'center', padding: '1em'}}>
           <strong>{juice.name}</strong>
           <br/>Brand: {juice.brand}
           <br/>Flavor: {juice.flavor}

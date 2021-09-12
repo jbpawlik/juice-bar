@@ -17,12 +17,17 @@ function Juice(props) {
     <React.Fragment>
       <Container>
         <Card onClick = {() => props.whenJuiceClicked(props.id)}>
-          <div className="card-title"><strong>{props.name}</strong></div>
-          <div className="card-text">{props.brand} brand
-          <br/>{props.flavor} flavor
-          <br/>${props.price} per liter
-          <br/>{props.quantity} liters
-          <br/><em>{quantityWarning}</em>
+          <div className="card-title" style={{border: '2px solid black', borderRadius: '5px'}}><strong>{props.name}</strong></div>
+          <div className="card-text">
+            {props.brand} brand
+            <br/>
+            {props.flavor} flavor
+            <br/>
+            ${props.price} per liter
+            <br/>
+            {props.quantity} liters
+            <br/>
+            <em>{quantityWarning}</em>
           </div>
         </Card>
       </Container>
