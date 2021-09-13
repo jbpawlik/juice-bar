@@ -16,6 +16,7 @@ class JuiceControl extends React.Component {
   }
 
   handleClick = () => {
+    console.log(this)
     if (this.state.selectedJuice != null) {
       this.setState({
         formVisibleOnPage: false,
@@ -43,7 +44,7 @@ class JuiceControl extends React.Component {
   handleSellLiterOfJuice = (selectedJuice) => {
     const newState = this.state.masterInventory.map((selectedJuice) => {
       const soldJuice = selectedJuice
-      if (soldJuice.quantity === 0) {
+      if (soldJuice.quantity < 1) {
         alert('Sold out')
       } else {
       soldJuice.quantity -= 1;
